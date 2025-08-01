@@ -5,6 +5,7 @@ services:
     plan: free
     branch: master
     dockerfilePath: ./docker/images/n8n/Dockerfile
+		startCommand: n8n
     buildCommand: |
       export SHELL=/bin/sh
       curl -fsSL https://get.pnpm.io/install.sh | sh -

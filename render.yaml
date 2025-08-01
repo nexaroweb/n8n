@@ -5,8 +5,8 @@ services:
     plan: free
     branch: master
     dockerfilePath: ./docker/images/n8n/Dockerfile
-		buildCommand: pnpm install && pnpm --filter n8n build
-    startCommand: pnpm --filter n8n exec -- n8n
+		buildCommand: pnpm install && pnpm --filter cli build
+    startCommand: pnpm --filter cli exec -- n8n
     envVars:
       - key: N8N_BASIC_AUTH_ACTIVE
         value: "true"

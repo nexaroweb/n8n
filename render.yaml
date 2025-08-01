@@ -4,13 +4,13 @@ services:
     env: docker
     plan: free
     branch: master
-    dockerfilePath: ./Dockerfile
-		buildCommand: |
-  export SHELL=/bin/sh
-  curl -fsSL https://get.pnpm.io/install.sh | sh -
-  export PATH="$HOME/.local/share/pnpm:$PATH"
-  pnpm install
-  pnpm build
+    dockerfilePath: ./docker/images/n8n/Dockerfile
+    buildCommand: |
+      export SHELL=/bin/sh
+      curl -fsSL https://get.pnpm.io/install.sh | sh -
+      export PATH="$HOME/.local/share/pnpm:$PATH"
+      pnpm install
+      pnpm build
     envVars:
       - key: N8N_BASIC_AUTH_ACTIVE
         value: "true"
